@@ -1,10 +1,16 @@
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import Home from './Screens/Home'
+import Room from './Screens/Room'
 
 function App() {
 
   return (
     <>
-    <div className='rounded-xl bg-white p-6 m-4'>Hello World</div>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="room/:roomId" element={<Room/>}/>
+      </Routes>
     </>
   )
 }
